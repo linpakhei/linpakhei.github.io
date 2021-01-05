@@ -1,0 +1,68 @@
+html,
+body,
+#root {
+  height: 100%;
+}
+
+.image {
+  padding: 10px;
+}
+
+/* .test {
+  animation: 1s circle;
+}
+
+@keyframes circle {
+  0% { clip-path: circle(0%); }
+  100% { clip-path: circle(75%); }
+} */
+
+/* .test {
+  clip-path: circle(25%);
+  transition: clip-path 1s;
+}
+
+.test:hover {
+  clip-path: circle(75%);
+} */
+
+#img1{
+  clip-path: circle(40% at var(--img1x) var(--img1y));
+}
+#img2{
+  clip-path: circle(40% at var(--img2x) var(--img2y));
+}
+#img3{
+  clip-path: circle(40% at var(--img3x) var(--img3y));
+}
+#img4{
+  clip-path: circle(40% at var(--img4x) var(--img4y));
+}
+#img5{
+  clip-path: circle(40% at var(--img5x) var(--img5y));
+}
+#img6{
+  clip-path: circle(40% at var(--img6x) var(--img6y));
+}
+#img7{
+  clip-path: circle(40% at var(--img7x) var(--img7y));
+}
+#img8{
+  clip-path: circle(40% at var(--img8x) var(--img8y));
+}
+#img9{
+  clip-path: circle(40% at var(--img9x) var(--img9y));
+}
+#img10{
+  clip-path: circle(40% at var(--img10x) var(--img10y));
+}
+#img11{
+  clip-path: circle(40% at var(--img11x) var(--img11y));
+}
+#img12{
+  clip-path: circle(40% at var(--img12x) var(--img12y));
+}
+
+.mask {
+  color: aqua;
+}
