@@ -2,9 +2,12 @@ import React, { useState, useEffect } from 'react'
 import Painting from './Painting';
 import styled from "styled-components";
 import emailjs from 'emailjs-com';
+import { useAlert } from 'react-alert'
 
 function Contact() {
 
+    const alert = useAlert()
+    
     const [state, setState] = useState({name: "", email: "", message: ""});
 
     const handleChange = e => {
@@ -22,9 +25,12 @@ function Contact() {
 
         emailjs.sendForm('service_7nu66iv', 'template_w2nmcdj', event.target, 'user_Kdvxq9GqpnMNT4qAbTGm0')
             .then((result) => {
-                window.location.reload()  //This is if you still want the page to reload (since e.preventDefault() cancelled that behavior) 
+                //--Not reload in github.io since it does not play well with client side routing
+                // window.location.reload()
+                alert.success('Email sent. Thanks~');
             }, (error) => {
                 console.log(error.text);
+                alert.error('Sorry, error occured.');
             });
     }
 

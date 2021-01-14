@@ -131,8 +131,8 @@ function Nav() {
                 <div style={{position: "absolute", right: "5px"}} className="social-media">
                     <SocialIcon style={MobileIconStyle} fgColor="white" bgColor="#2c78ba" url="https://www.linkedin.com/in/jason-lin-2175a6b2/" />
                     <SocialIcon style={MobileIconStyle} fgColor="white" url="https://github.com/linpakhei" />
-                    <SocialIcon style={MobileIconStyle} fgColor="white" url="https://www.facebook.com/pakhei.lin/" />
-                    <SocialIcon style={MobileIconStyle} fgColor="white" url="https://www.instagram.com/linpakhei/" />
+                    {/* <SocialIcon style={MobileIconStyle} fgColor="white" url="https://www.facebook.com/pakhei.lin/" />
+                    <SocialIcon style={MobileIconStyle} fgColor="white" url="https://www.instagram.com/linpakhei/" /> */}
                     <SocialIcon style={MobileIconStyle} fgColor="white" url="mailto:linpakhei@gmail.com" network="email" />
                 </div>
             </Wrapper>
@@ -163,8 +163,8 @@ function Nav() {
                 <div>
                     <SocialIcon style={MobileIconStyle} fgColor="white" bgColor="#2c78ba" url="https://www.linkedin.com/in/jason-lin-2175a6b2/" />
                     <SocialIcon style={MobileIconStyle} fgColor="white" url="https://github.com/linpakhei" />
-                    <SocialIcon style={MobileIconStyle} fgColor="white" url="https://www.facebook.com/pakhei.lin/" />
-                    <SocialIcon style={MobileIconStyle} fgColor="white" url="https://www.instagram.com/linpakhei/" />
+                    {/* <SocialIcon style={MobileIconStyle} fgColor="white" url="https://www.facebook.com/pakhei.lin/" />
+                    <SocialIcon style={MobileIconStyle} fgColor="white" url="https://www.instagram.com/linpakhei/" /> */}
                     <SocialIcon style={MobileIconStyle} fgColor="white" url="linpakhei@gmail.com" network="email" />
                 </div>
             </div>
