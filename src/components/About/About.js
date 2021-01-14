@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from "styled-components";
-import Particles from 'react-particles-js';
-import Background from './Background';
+import Background from '../Background';
+import ProgressBar from './ProgressBar';
 
 function About() {
     const[settings, setSettings] = useState({
@@ -35,9 +35,9 @@ function About() {
             { label: 'jQuery Rain', url: 'http://www.jqueryrain.com/', target: '_top' },
             { label: 'jQuery Plugins', url: 'http://jquery-plugins.net/', target: '_top' },
         ],
-        width: 480,
-        height: 480,
-        radius: '65%',
+        width: 600,
+        height: 600,
+        radius: '80%',
         radiusMin: 75,
         bgDraw: false,
         bgColor: '#111',
@@ -47,7 +47,7 @@ function About() {
         fov: 800,
         speed: 1,
         fontFamily: 'Oswald, Arial, sans-serif',
-        fontSize: '15',
+        fontSize: '20',
         fontColor: '#fff',
         fontWeight: 'bold',//bold
         fontStyle: 'normal',//italic 
@@ -68,31 +68,78 @@ function About() {
     });
 
     useEffect(() => {
-        var svg3DTagCloud = new window.SVG3DTagCloud( document.getElementById( 'holder'  ), settings );
-    });
+        // tag cloud
+        new window.SVG3DTagCloud( document.getElementById( 'tagSphere' ), settings );
+    }, []);
 
-    const Wrapper = styled.div`
-        // background-color: #2e2e2e;
-        background: linear-gradient(45deg, rgb(69, 72, 77) 0%, rgb(0, 0, 0) 100%);
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: 100%;
-        overflow-x: scroll;
-    `;
+    var htmlStart = "<html>";
+    var headerStart = "<header>";
+    var headerEnd = "</header>";
+    var bodyStart = "<body>";
+    var bodyend = "</body>";
+    var htmlEnd = "</html>";
 
     const Container = styled.div`
-        margin: auto;
-        z-index: 0;
+        margin-top: 90px;
+        margin-left: 50px;
+        position: relative;
+        display: flex;
+        // height: 100%;
+        width: 100%;
     `;
+    
+    const ContainerLeft = styled.div`
+        width: 48%;
+    `;
+
+    const ContainerRight = styled.div`
+        width: 50%;
+    `;
+
+    const testData = [
+        { bgcolor: "#6a1b9a", completed: 90, lang: "Java" },
+        { bgcolor: "#00695c", completed: 90, lang: "Spring" },
+        { bgcolor: "#ef6c00", completed: 85, lang: "Redis" },
+        { bgcolor: "#00a1a7", completed: 80, lang: "Javascript" },
+        { bgcolor: "#a70000", completed: 75, lang: "HTML" },
+        { bgcolor: "#ff04be", completed: 70, lang: "React JS" },
+        { bgcolor: "#069217", completed: 50, lang: "CSS" },
+    ];
                         
     return (
-        <Wrapper>
-            {/* <Background/> */}
-            <Container>
-                <div id="holder"></div>
+        <div className="wrapper">
+            <Background/>
+            <Container className="container">
+                <ContainerLeft className="container-left">
+                    <div className="htmlTag">{htmlStart}</div>
+
+                    <span className="htmlTag htmlTagHeader" style={{marginLeft: "60px"}}>{headerStart}</span>
+                        <span className="headerText"> About </span>
+                    <span className="htmlTag">{headerEnd}</span>
+
+                    <div className="htmlTag htmlTagHeader" style={{marginLeft: "60px"}}>{bodyStart}</div>
+                        <div style={{marginLeft: "100px"}} id="about-content" className="htmlContent">
+                            Hi, I'm Jason, a Software Engineer based in Hong Kong.<br/>
+                            I am passionate about creating things that improves the lives around me.<br/>
+                            I specialize on Java (back-end) application development and with some experience on web development.
+                        </div>
+                        <br/>
+                        <div style={{marginLeft: "100px"}} className="htmlContent">
+                            {testData.map((item, idx) => (
+                                <ProgressBar key={idx} bgcolor={item.bgcolor} completed={item.completed} lang={item.lang} />
+                            ))}
+                            {/* <ProgressBar bgcolor={"#6a1b9a"} completed={60}/> */}
+                        </div>
+                    <div className="htmlTag htmlTagHeader" style={{marginLeft: "60px"}}>{bodyend}</div>
+
+                    <div className="htmlTag">{htmlEnd}</div>
+                </ContainerLeft>
+
+                <ContainerRight className="container-right">
+                    <div id="tagSphere"/>
+                </ContainerRight>
             </Container>
-        </Wrapper>
+        </div>
     )
 }
 

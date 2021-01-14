@@ -8,7 +8,7 @@ function Background() {
                 params={{
                     particles: {
                         number: {
-                            value: 150,
+                            value: 80,
                             density: {
                                 enable: true,
                                 area: 800,
@@ -16,15 +16,15 @@ function Background() {
                             },
                         },
                         opacity: {
-                            value: 0.05
+                            value: 0.5
                         },
                         links: {
-                            opacity: 0.05
+                            opacity: 0.1
                         }
                     }
                 }}
                 style={{
-                    position: 'fixed'
+                    position: 'fixed',
                 }}
             />
         </div>
