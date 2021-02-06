@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import Painting from './Painting';
-import styled from "styled-components";
 import emailjs from 'emailjs-com';
 import { useAlert } from 'react-alert'
 
@@ -74,7 +73,6 @@ function Contact() {
         color: "#fff",
         display: "block",
         fontSize: "12pt",
-        marginBottom: "3px",
         outline: "none",
         padding: "10px 15px",
         width: "100%",

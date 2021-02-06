@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 
 function ProgressBar(props) {
     const { bgcolor, completed, lang } = props;
@@ -41,11 +41,9 @@ function ProgressBar(props) {
         fontWeight: 'bold'
     }
 
-    useEffect(() => {
-        setTimeout(()=>{
-            setPercent(completed);
-        }, 250)
-    }, []);
+    setTimeout(()=>{
+        setPercent(completed);
+    }, 250);
 
     return (
         <div style={containerStyles}>

@@ -1,4 +1,4 @@
-import React, { useEffect, useContext, useState } from 'react';
+import React, { useEffect } from 'react';
 import styled from "styled-components";
 import Background from '../Background';
 import { useHistory } from "react-router-dom";
@@ -93,19 +93,6 @@ function Home() {
     const ContainerRight = styled.div`
         width: 50%;
     `;
-
-    const[state, setState] = useState("menu-close");
-    const toggleFunction = (toggled) => {
-        if (toggled) {
-            // open a menu
-            console.log("open");
-            setState("menu-open");
-        } else {
-            // close a menu
-            console.log("close");
-            setState("menu-close");
-        }
-    }
 
     return (
         <div className="wrapper">

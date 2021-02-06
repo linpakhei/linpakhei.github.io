@@ -1,49 +1,48 @@
 import React, { useEffect } from 'react'
-import styled from "styled-components";
 import Background from "./Background";
 
 function Profolio() {
     window.scrollPos = 0;
-
-    var pos = document.documentElement;
-
-    const getRelativePos = e => {    
-        try{
-            pos.style.setProperty("--img1x", (e.clientX-document.getElementById("imgDiv1").offsetLeft) + "px");
-            pos.style.setProperty("--img1y", (e.clientY-document.getElementById("imgDiv1").offsetTop+window.scrollPos) + "px");
-            pos.style.setProperty("--img2x", (e.clientX-document.getElementById("imgDiv2").offsetLeft) + "px");
-            pos.style.setProperty("--img2y", (e.clientY-document.getElementById("imgDiv2").offsetTop+window.scrollPos) + "px");
-            pos.style.setProperty("--img3x", (e.clientX-document.getElementById("imgDiv3").offsetLeft) + "px");
-            pos.style.setProperty("--img3y", (e.clientY-document.getElementById("imgDiv3").offsetTop+window.scrollPos) + "px");
-
-            pos.style.setProperty("--img4x", (e.clientX-document.getElementById("imgDiv4").offsetLeft) + "px");
-            pos.style.setProperty("--img4y", (e.clientY-document.getElementById("imgDiv4").offsetTop+window.scrollPos) + "px");
-            pos.style.setProperty("--img5x", (e.clientX-document.getElementById("imgDiv5").offsetLeft) + "px");
-            pos.style.setProperty("--img5y", (e.clientY-document.getElementById("imgDiv5").offsetTop+window.scrollPos) + "px");
-            pos.style.setProperty("--img6x", (e.clientX-document.getElementById("imgDiv6").offsetLeft) + "px");
-            pos.style.setProperty("--img6y", (e.clientY-document.getElementById("imgDiv6").offsetTop+window.scrollPos) + "px");
-
-            pos.style.setProperty("--img7x", (e.clientX-document.getElementById("imgDiv7").offsetLeft) + "px");
-            pos.style.setProperty("--img7y", (e.clientY-document.getElementById("imgDiv7").offsetTop+window.scrollPos) + "px");
-            pos.style.setProperty("--img8x", (e.clientX-document.getElementById("imgDiv8").offsetLeft) + "px");
-            pos.style.setProperty("--img8y", (e.clientY-document.getElementById("imgDiv8").offsetTop+window.scrollPos) + "px");
-            pos.style.setProperty("--img9x", (e.clientX-document.getElementById("imgDiv9").offsetLeft) + "px");
-            pos.style.setProperty("--img9y", (e.clientY-document.getElementById("imgDiv9").offsetTop+window.scrollPos) + "px");
-
-            pos.style.setProperty("--img10x", (e.clientX-document.getElementById("imgDiv10").offsetLeft) + "px");
-            pos.style.setProperty("--img10y", (e.clientY-document.getElementById("imgDiv10").offsetTop+window.scrollPos) + "px");
-            pos.style.setProperty("--img11x", (e.clientX-document.getElementById("imgDiv11").offsetLeft) + "px");
-            pos.style.setProperty("--img11y", (e.clientY-document.getElementById("imgDiv11").offsetTop+window.scrollPos) + "px");
-            pos.style.setProperty("--img12x", (e.clientX-document.getElementById("imgDiv12").offsetLeft) + "px");
-            pos.style.setProperty("--img12y", (e.clientY-document.getElementById("imgDiv12").offsetTop+window.scrollPos) + "px");
-        } catch(err) {
-            // console.log(err);
-            window.removeEventListener('mousemove', getRelativePos);
-        }
-    }
     
     useEffect(() => {
         console.log("useEffect called");
+
+        var pos = document.documentElement;
+
+        const getRelativePos = e => {    
+            try{
+                pos.style.setProperty("--img1x", (e.clientX-document.getElementById("imgDiv1").offsetLeft) + "px");
+                pos.style.setProperty("--img1y", (e.clientY-document.getElementById("imgDiv1").offsetTop+window.scrollPos) + "px");
+                pos.style.setProperty("--img2x", (e.clientX-document.getElementById("imgDiv2").offsetLeft) + "px");
+                pos.style.setProperty("--img2y", (e.clientY-document.getElementById("imgDiv2").offsetTop+window.scrollPos) + "px");
+                pos.style.setProperty("--img3x", (e.clientX-document.getElementById("imgDiv3").offsetLeft) + "px");
+                pos.style.setProperty("--img3y", (e.clientY-document.getElementById("imgDiv3").offsetTop+window.scrollPos) + "px");
+    
+                pos.style.setProperty("--img4x", (e.clientX-document.getElementById("imgDiv4").offsetLeft) + "px");
+                pos.style.setProperty("--img4y", (e.clientY-document.getElementById("imgDiv4").offsetTop+window.scrollPos) + "px");
+                pos.style.setProperty("--img5x", (e.clientX-document.getElementById("imgDiv5").offsetLeft) + "px");
+                pos.style.setProperty("--img5y", (e.clientY-document.getElementById("imgDiv5").offsetTop+window.scrollPos) + "px");
+                pos.style.setProperty("--img6x", (e.clientX-document.getElementById("imgDiv6").offsetLeft) + "px");
+                pos.style.setProperty("--img6y", (e.clientY-document.getElementById("imgDiv6").offsetTop+window.scrollPos) + "px");
+    
+                pos.style.setProperty("--img7x", (e.clientX-document.getElementById("imgDiv7").offsetLeft) + "px");
+                pos.style.setProperty("--img7y", (e.clientY-document.getElementById("imgDiv7").offsetTop+window.scrollPos) + "px");
+                pos.style.setProperty("--img8x", (e.clientX-document.getElementById("imgDiv8").offsetLeft) + "px");
+                pos.style.setProperty("--img8y", (e.clientY-document.getElementById("imgDiv8").offsetTop+window.scrollPos) + "px");
+                pos.style.setProperty("--img9x", (e.clientX-document.getElementById("imgDiv9").offsetLeft) + "px");
+                pos.style.setProperty("--img9y", (e.clientY-document.getElementById("imgDiv9").offsetTop+window.scrollPos) + "px");
+    
+                pos.style.setProperty("--img10x", (e.clientX-document.getElementById("imgDiv10").offsetLeft) + "px");
+                pos.style.setProperty("--img10y", (e.clientY-document.getElementById("imgDiv10").offsetTop+window.scrollPos) + "px");
+                pos.style.setProperty("--img11x", (e.clientX-document.getElementById("imgDiv11").offsetLeft) + "px");
+                pos.style.setProperty("--img11y", (e.clientY-document.getElementById("imgDiv11").offsetTop+window.scrollPos) + "px");
+                pos.style.setProperty("--img12x", (e.clientX-document.getElementById("imgDiv12").offsetLeft) + "px");
+                pos.style.setProperty("--img12y", (e.clientY-document.getElementById("imgDiv12").offsetTop+window.scrollPos) + "px");
+            } catch(err) {
+                // console.log(err);
+                window.removeEventListener('mousemove', getRelativePos);
+            }
+        }
 
         // First enter this page
         pos.style.setProperty("--img1x", (-1000) + "px");
