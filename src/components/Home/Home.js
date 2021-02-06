@@ -8,6 +8,7 @@ import Perspective from "./Perspective";
 function Home() {
     // button click redirect to Contact Page
     const history = useHistory();
+    
     const buttonClick = () => {
         let path = `contact`; 
         history.push(path);
