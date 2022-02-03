@@ -63,7 +63,7 @@ function Home() {
     }
 
     useEffect(() => {
-        inputConsole(['Hi,', ' this is Jason,', 'a Software Engineer.', 'I\'m a web developer based in Manchester, United Kingdom', 'specializing in Java (Back-end) and React JS (Front-end).']);
+        inputConsole(['Hi,', ' this is Jason,', 'a Software Engineer.', 'I\'m a web developer based in Great Manchester, United Kingdom', 'specializing in Java (Back-end) and React JS (Front-end).']);
 
         return () => {
             window.clearInterval(window.consoleText);

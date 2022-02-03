@@ -119,7 +119,7 @@ function About() {
 
                     <div className="htmlTag htmlTagHeader" style={{marginLeft: "60px"}}>{bodyStart}</div>
                         <div style={{marginLeft: "100px"}} id="about-content" className="htmlContent">
-                            Hi, I'm Jason, a Software Engineer based in Manchester, United Kingdom.<br/>
+                            Hi, I'm Jason, a Software Engineer based in Greate Manchester, United Kingdom.<br/>
                             I am passionate about creating things that improves the lives around me.<br/>
                             I specialize on Java (back-end) application development and with some experience on web development.
                         </div>
